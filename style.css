@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --blue: #7456ed;
+  --purple: #b365f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav .branding img {
+  width: 100px;
+}
+
+nav div.links {
+  display: none;
+  gap: 1em;
+  align-items: center;
+}
+
+#nav-menu-btn {
+  font-size: 1.5rem;
+}
+
+.hero {
+  margin: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr .2fr;
+  grid-template-areas:
+    "img"
+    "content";
+}
+
+.hero .image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero img {
+  grid-area: img;
+  width: 90vw;
+}
+
+.hero .content {
+  grid-area: content;
+  text-align: justify;
+  padding: 20px;
+}
+
+.hero .content button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 20px;
+  font-size: 1.2rem;
+}
+
+.btn-cta {
+  color: #fff;
+  background: linear-gradient(to right, var(--blue), var(--purple));
+}
