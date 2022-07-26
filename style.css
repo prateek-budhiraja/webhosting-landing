@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 :root {
-  --blue: #7456ed;
-  --purple: #b365f3;
+  --blue: #4C3AE3;
+  --purple: #538FFB;
 }
 
 * {
@@ -83,6 +83,10 @@ nav div.links h5:hover {
   cursor: pointer;
 }
 
+.btn:hover {
+  background: linear-gradient(to right, var(--purple), var(--blue));
+}
+
 .btn-cta {
   color: #fff;
   background: linear-gradient(to right, var(--blue), var(--purple));
@@ -113,11 +117,18 @@ nav div.links h5:hover {
 /* Pricing cards */
 
 .pricing {
+  margin: 40px 0;
   padding: 20px;
+  background: linear-gradient(to bottom right, var(--blue), var(--purple));
 }
 
 .pricing h2 {
+  color: #fff;
   text-align: center;
+}
+
+.pricing .pricing-content {
+  padding: 20px 10px;
 }
 
 .pricing ul {
@@ -126,15 +137,15 @@ nav div.links h5:hover {
 }
 
 .pricing-card {
+  background-color: #fff;
   padding: 20px 30px;
-  border: 1px solid #000;
   margin-top: 12px;
   border-radius: 12px;
 }
 
 #selected-pricing {
+  background-color: #fff;
   padding: 20px 30px;
-  border: 1px solid #000;
   margin-top: 12px;
   border-radius: 12px;
   position: relative;
@@ -171,7 +182,14 @@ nav div.links h5:hover {
 
 .testimonials {
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.testimonial-content {
+  max-width: 800px;
+}
+
 
 .testimonials h2 {
   text-align: center;
@@ -186,9 +204,23 @@ nav div.links h5:hover {
 }
 
 .testimonial-card {
-  padding: 10px;
+  padding: 15px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+}
+
+.profile-img {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: #758283;
+  float: left;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.profile-info {
+  margin-top: 8px;
 }
 
 .banner {
@@ -208,6 +240,12 @@ nav div.links h5:hover {
   background: transparent;
   border: 2px solid #fff;
   color: #fff;
+  border-radius: 30px;
+}
+
+.banner .btn:hover {
+  background: #fff;
+  color: var(--purple);
 }
 
 footer {
@@ -222,6 +260,8 @@ footer ul {
   list-style-type: none;
 }
 
+
+
 footer .col1 img {
   width: 50px
 }
@@ -234,6 +274,12 @@ footer img {
 footer .col5 img {
   width: 15px;
 }
+
+footer li,
+footer img {
+  cursor: pointer;
+}
+
 
 @media screen and (min-width: 920px) {
 
@@ -280,5 +326,114 @@ footer .col5 img {
 
   .hero .content button {
     display: inline;
+  }
+
+  .services {
+    margin-top: -80px;
+    margin-bottom: 50px;
+  }
+
+  .services>p {
+    text-align: center;
+  }
+
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2em;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-card h3 {
+    margin-bottom: 10px;
+  }
+
+  .pricing .pricing-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2em;
+  }
+
+  .pricing-card {
+    position: relative;
+  }
+
+  .pricing-card ul {
+    position: absolute;
+    top: 90px;
+  }
+
+  .pricing-card .bottom {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  #selected-pricing ul {
+    margin-top: 80px;
+  }
+
+  .testimonials {
+    padding: 20px 100px;
+    margin-bottom: 40px;
+
+  }
+
+  .testimonials>p {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .testimonial-card {
+    padding: 25px;
+  }
+
+  .banner {
+    padding: 40px 10%;
+    display: grid;
+    grid-template-columns: 1fr .6fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 5em;
+  }
+
+  .banner .right {
+    justify-self: end;
+  }
+
+  footer {
+    padding-left: 40px;
+    font-size: 1rem;
+  }
+
+  footer .col1 img {
+    width: 80px;
+  }
+
+  footer .col5 img {
+    width: 25px;
+  }
+
+  footer .col1 {
+    padding-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .pricing .pricing-content {
+    margin: 0 180px;
+  }
+
+  .testimonials {
+    margin: auto 200px 40px 200px;
+  }
+
+  .service-cards {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
